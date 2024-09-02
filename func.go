@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"log"
+)
 
 func add(num1 float64, num2 float64) float64 {
 	return num1 + num2
@@ -44,6 +47,9 @@ func main() {
 	case "/":
 		res = div(num1, num2)
 		fmt.Printf("O resultado da Divisão: %.2f", res)
+	default:
+		fmt.Println("simbolo nao encontrado")
+		log.Panic("erro simbolo")
 	}
 
 }
